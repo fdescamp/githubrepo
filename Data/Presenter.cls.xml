@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Export generator="Cache" version="25">
+<Class name="Data.Presenter">
+<Description>
+Person making one or more session presentations</Description>
+<Super>%Persistent,%ZEN.DataModel.Adaptor</Super>
+<TimeCreated>62879,79828.262242</TimeCreated>
+
+<Property name="PresenterName">
+<Type>%String</Type>
+<Required>1</Required>
+<Parameter name="ZENLABEL" value="Name"/>
+</Property>
+
+<Property name="PresenterDepartment">
+<Type>Data.Department</Type>
+<Required>1</Required>
+<Parameter name="ZENLABEL" value="Department"/>
+<Parameter name="ZENSQL" value="SELECT ID,DepartmentName from Data.Department"/>
+</Property>
+
+<Storage name="Default">
+<Type>%Library.CacheStorage</Type>
+<DataLocation>^Data.PresenterD</DataLocation>
+<DefaultData>PresenterDefaultData</DefaultData>
+<IdLocation>^Data.PresenterD</IdLocation>
+<IndexLocation>^Data.PresenterI</IndexLocation>
+<StreamLocation>^Data.PresenterS</StreamLocation>
+<ExtentSize>100000</ExtentSize>
+<Data name="PresenterDefaultData">
+<Value name="1">
+<Value>%%CLASSNAME</Value>
+</Value>
+<Value name="2">
+<Value>PresenterName</Value>
+</Value>
+<Value name="3">
+<Value>PresenterDepartment</Value>
+</Value>
+</Data>
+</Storage>
+</Class>
+</Export>
